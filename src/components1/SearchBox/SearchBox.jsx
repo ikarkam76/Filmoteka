@@ -1,16 +1,20 @@
-import { Input, SearchButton, Wrapper } from "Components/SearchBox/SearchBox.styled";
-import { useState } from "react";
+import {
+  Input,
+  SearchButton,
+  Wrapper,
+} from 'components1/SearchBox/SearchBox.styled';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export const SearchBox = ({sendSearchName}) => {
+export const SearchBox = ({ sendSearchName }) => {
   const [searchName, setSearchName] = useState('');
 
   const onChange = e => {
     setSearchName(e.target.value);
   };
 
-    const send = () => {
-        sendSearchName(searchName);
+  const send = () => {
+    sendSearchName(searchName);
   };
 
   return (
@@ -21,8 +25,8 @@ export const SearchBox = ({sendSearchName}) => {
       </SearchButton>
     </Wrapper>
   );
-}; 
+};
 
 SearchBox.propTypes = {
   sendSearchName: PropTypes.func.isRequired,
-}
+};

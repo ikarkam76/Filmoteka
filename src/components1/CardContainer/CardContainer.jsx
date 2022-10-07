@@ -3,7 +3,7 @@ import {
   Container,
   Img,
   InfoContainer,
-} from 'Components/CardContainer/CardContainer.styled';
+} from 'components1/CardContainer/CardContainer.styled';
 
 export const CardContainer = ({ movie }) => {
   return (
@@ -30,4 +30,4 @@ export const CardContainer = ({ movie }) => {
 
 CardContainer.propTypes = {
   movie: PropTypes.object.isRequired,
-}
+};

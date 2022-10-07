@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCastById } from 'Services/getmovies';
-import { ActorImg, CastContainer, CastItem } from 'Components/Cast/Cast.styled';
+import {
+  ActorImg,
+  CastContainer,
+  CastItem,
+} from 'components1/Cast/Cast.styled';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -14,7 +18,7 @@ const Cast = () => {
   if (!actors) {
     return <h4>Loading...</h4>;
   }
-  
+
   return (
     <CastContainer>
       <h4>There are {actors.length} actors in this movie!</h4>

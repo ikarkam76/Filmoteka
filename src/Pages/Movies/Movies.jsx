@@ -1,4 +1,4 @@
-import { SearchBox } from 'Components/SearchBox/SearchBox';
+import { SearchBox } from 'components1/SearchBox/SearchBox';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Outlet, useSearchParams, Link, useLocation } from 'react-router-dom';
@@ -16,14 +16,12 @@ const Movies = () => {
       setMovies(null);
       return;
     }
-    getMovieByName(queryName).then(res =>
-      setMovies(res.data.results)
-    );
-  }, [queryName])
+    getMovieByName(queryName).then(res => setMovies(res.data.results));
+  }, [queryName]);
 
-  const changeSearch = (value) => {
-    setSearchParams(value !== '' ? {query: value} : {})
-  }
+  const changeSearch = value => {
+    setSearchParams(value !== '' ? { query: value } : {});
+  };
 
   if (!movies) {
     return (
@@ -33,23 +31,23 @@ const Movies = () => {
       </MoviesContainer>
     );
   }
-    return (
-      <MoviesContainer>
-        <Outlet />
-        <SearchBox sendSearchName={changeSearch} />
-        <ul>
-          {movies.map(({ id, title }) => {
-            return (
-              <li key={id}>
-                <Link to={`/movies/${id}`} state={{ from: location }}>
-                  {title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </MoviesContainer>
-    );
-}
+  return (
+    <MoviesContainer>
+      <Outlet />
+      <SearchBox sendSearchName={changeSearch} />
+      <ul>
+        {movies.map(({ id, title }) => {
+          return (
+            <li key={id}>
+              <Link to={`/movies/${id}`} state={{ from: location }}>
+                {title}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </MoviesContainer>
+  );
+};
 
 export default Movies;
