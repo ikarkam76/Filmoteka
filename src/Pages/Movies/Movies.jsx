@@ -1,4 +1,4 @@
-import { SearchBox } from 'components1/SearchBox/SearchBox';
+import { SearchBox } from 'Components/SearchBox/SearchBox';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Outlet, useSearchParams, Link, useLocation } from 'react-router-dom';

@@ -1,4 +1,4 @@
-import { StyledLink } from 'components1/BackLink/BackLink.styled';
+import { StyledLink } from 'Components/BackLink/BackLink.styled';
 import PropTypes from 'prop-types';
 
 export const BackLink = ({ to, children }) => {

@@ -3,7 +3,7 @@ import {
   Header,
   Logo,
   Link,
-} from 'components1/SharedLayout/SharedLayout.styled';
+} from 'Components/SharedLayout/SharedLayout.styled';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 

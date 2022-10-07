@@ -2,7 +2,7 @@ import {
   Input,
   SearchButton,
   Wrapper,
-} from 'components1/SearchBox/SearchBox.styled';
+} from 'Components/SearchBox/SearchBox.styled';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 

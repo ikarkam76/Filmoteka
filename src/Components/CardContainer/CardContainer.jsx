@@ -3,7 +3,7 @@ import {
   Container,
   Img,
   InfoContainer,
-} from 'components1/CardContainer/CardContainer.styled';
+} from 'Components/CardContainer/CardContainer.styled';
 
 export const CardContainer = ({ movie }) => {
   return (
